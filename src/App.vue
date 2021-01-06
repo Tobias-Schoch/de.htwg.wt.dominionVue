@@ -56,4 +56,83 @@
     .v-avatar, object, svg {
         cursor: pointer;
     }
+
+    div.text {
+        text-align: left;
+    }
+
+    .play .v-image, .rules .v-image {
+        display: none;
+    }
+
+    .play:hover .v-image, .rules:hover .v-image {
+        display: block;
+    }
+
+    .v-image.button-icon {
+        float: left;
+        margin-right: 15px;
+        margin-top: 0 !important;
+    }
+
+    .text {
+        display: block;
+        margin-left: 15px;
+    }
+
+    .btn {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 25px;
+        font-family: 'McLaren', cursive;
+        font-weight: bold;
+        width: 140px;
+        height: 70px;
+        -webkit-border-radius: 70px;
+        border-radius: 70px;
+        outline: none;
+    }
+
+    .player_amount {
+        margin-bottom: 35px;
+    }
+    .v-input {
+        width: 800px;
+        font-size: 22px;
+        font-family: 'McLaren', cursive;
+        font-weight: bold;
+    }
+    .v-image.button-icon {
+        float: left;
+        margin-right: 15px;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+
+    .text {
+        display: block;
+        margin-left: 15px;
+    }
+
+    .player_amount {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 35px;
+        font-family: 'McLaren', cursive;
+        font-weight: bold;
+    }
+
+    button.player_amount {
+        font-weight: normal;
+    }
+    h4 {
+        font-size: 25px;
+        margin-top: 35px;
+    }
+    .rules {
+        text-align: left;
+    }
+    .rule-button {
+        margin-bottom: 30px;
+    }
 </style>

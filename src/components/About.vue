@@ -108,14 +108,5 @@
 </script>
 
 <style>
-    h4 {
-        font-size: 25px;
-        margin-top: 35px;
-    }
-    .rules {
-        text-align: left;
-    }
-    .rule-button {
-        margin-bottom: 30px;
-    }
+
 </style>
