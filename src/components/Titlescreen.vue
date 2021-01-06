@@ -14,7 +14,7 @@
         <v-row>
             <v-col align="center"
                    justify="center">
-                <button class="btn play">
+                <button class="btn play" v-on:click="$router.push('game')">
 
                     <v-img class="button-icon"
                            height="30px"

@@ -10,13 +10,13 @@
             <v-avatar class="d-block text-center mx-auto mb-5 mt-5" v-on:click="$router.push('titlescreen')">
                 <img src="img/home.png">
             </v-avatar>
-            <v-avatar class="d-block text-center mx-auto mb-5">
+            <v-avatar class="d-block text-center mx-auto mb-5" v-on:click="$router.push('game')">
                 <img src="img/play-button.png">
             </v-avatar>
             <v-avatar class="d-block text-center mx-auto mb-5" v-on:click="$router.push('about')">
                 <img src="img/info.png">
             </v-avatar>
-            <a href="https://github.com/Involute1/de.htwg.wt.dominionVue"><v-avatar class="d-block text-center mx-auto mb-5">
+            <a href="https://github.com/Involute1/de.htwg.wt.dominionVue" target="_blank"><v-avatar class="d-block text-center mx-auto mb-5">
                 <img src="img/github.png">
             </v-avatar></a>
         </v-navigation-drawer>
