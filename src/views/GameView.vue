@@ -19,11 +19,15 @@ import PlayerName from "@/components/PlayerName";
 import Gameboard from "@/components/Gameboard";
 export default {
   name: "GameView",
-  components: {PlayerName, Player, Gameboard}
-
+  components: {PlayerName, Player, Gameboard},
+  methods: {
+    send() {
+      var kek = this.$store.getters.getClientId;
+      console.log(kek);
+    }
+  }
 }
 </script>
-
 <style scoped>
 
 </style>

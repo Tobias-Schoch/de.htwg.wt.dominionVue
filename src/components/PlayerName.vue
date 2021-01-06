@@ -16,7 +16,7 @@
                    justify="center"
                    class="player_amount mt-9">
                 <div class="tui-instructions">
-                    Tell me your name
+                  {{ htmlString }}
                 </div>
             </v-col>
         </v-row>
@@ -43,7 +43,18 @@
 </template>
 
 <script>
+    import {mapGetters} from "vuex";
+
     export default {
-        //
+      computed: {
+        ...mapGetters({
+          htmlString: 'getHtml'
+        })
+      },
+      methods: {
+        send(playerName) {
+          this.$store.dispatch("request", playerName);
+        }
+      }
     }
 </script>

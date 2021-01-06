@@ -12,8 +12,7 @@
         <v-row>
             <v-col align="center"
                    justify="center">
-                <button class="btn play player_amount player-selection" value="3">
-
+                <button class="btn play player_amount player-selection" value="3" v-on:click="send(3)">
                     <v-img class="button-icon"
                            height="30px"
                            width="30px"
@@ -28,8 +27,7 @@
         <v-row>
             <v-col align="center"
                    justify="center">
-                <button class="btn play player_amount player-selection" value="4">
-
+                <button class="btn play player_amount player-selection" value="4" v-on:click="send(4)">
                     <v-img class="button-icon"
                            height="30px"
                            width="30px"
@@ -44,7 +42,7 @@
         <v-row>
             <v-col align="center"
                    justify="center">
-                <button class="btn play player_amount player-selection" value="5">
+                <button class="btn play player_amount player-selection" value="5" v-on:click="send(5)">
 
                     <v-img class="button-icon"
                            height="30px"
@@ -63,9 +61,8 @@
 <script>
 export default {
   methods: {
-    send() {
-      var kek = this.$store.getters.getClientId;
-      console.log(kek);
+    send(playerCount) {
+      this.$store.dispatch("request", playerCount);
     }
   }
 }
