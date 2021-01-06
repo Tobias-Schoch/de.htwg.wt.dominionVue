@@ -1,4 +1,5 @@
 export default {
+    websocket: null,
     client_id: null,
     html: '',
     playerActions: 1,

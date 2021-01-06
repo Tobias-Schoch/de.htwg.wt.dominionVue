@@ -30,19 +30,23 @@ export default {
     websocketOnMessage({commit}, message) {
         controller = JSON.parse(message.data);
         if ("client_id" in controller) {
-            commit('client_id', controller.client_id);
+            commit('setClientId', controller.client_id);
             console.info('Websocket got id: ' + controller.client_id);
         } else {
-            commit('html', controller.html);
-            commit('playerActions', controller.playerActions);
-            commit('playerBuys', controller.playerBuys);
-            commit('playerMoney', controller.playerMoney);
-            commit('controllerPhase', controller.controllerPhase);
-            commit('turn', controller.turn);
-            commit('playerName', controller.playerName);
-            commit('playerHand', controller.playerHand);
-            commit('playingDecks', controller.playingDecks);
-            commit('playerTurn', controller.playerTurn);
+            commit('setHtml', controller.html);
+            commit('setPlayerActions', controller.playerActions);
+            commit('setPlayerBuys', controller.playerBuys);
+            commit('setPlayerMoney', controller.playerMoney);
+            commit('setControllerPhase', controller.controllerPhase);
+            commit('setTurn', controller.turn);
+            commit('setPlayerName', controller.playerName);
+            commit('setPlayerHand', controller.playerHand);
+            commit('setPlayingDecks', controller.playingDecks);
+            commit('setPlayerTurn', controller.playerTurn);
         }
+    },
+
+    request({commit}, command) {
+        commit('request', command);
     }
 }

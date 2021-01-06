@@ -14,7 +14,7 @@
         <v-row>
             <v-col align="center"
                    justify="center">
-                <button class="btn play" v-on:click="$router.push('game')">
+                <button class="btn play" v-on:click="$router.push('game'); send();">
 
                     <v-img class="button-icon"
                            height="30px"
@@ -47,6 +47,10 @@
 
 <script>
     export default {
-        //
+        methods: {
+          send() {
+            this.$store.dispatch("request", 'local');
+          }
+        }
     }
 </script>

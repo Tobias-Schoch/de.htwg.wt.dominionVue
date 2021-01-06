@@ -1,4 +1,7 @@
 export default {
+    getWebsocket(state) {
+        return state.websocket
+    },
     getClientId(state) {
         return state.client_id
     },

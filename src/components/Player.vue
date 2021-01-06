@@ -42,7 +42,7 @@
         <v-row>
             <v-col align="center"
                    justify="center">
-                <button class="btn play player_amount" value="5">
+                <button class="btn play player_amount" value="5" v-on:click="send()">
 
                     <v-img class="button-icon"
                            height="30px"
@@ -57,3 +57,14 @@
         </v-row>
     </v-container>
 </template>
+
+<script>
+export default {
+  methods: {
+    send() {
+      var kek = this.$store.getters.getClientId;
+      console.log(kek);
+    }
+  }
+}
+</script>
