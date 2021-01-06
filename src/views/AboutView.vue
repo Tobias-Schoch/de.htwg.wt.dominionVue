@@ -1,11 +1,11 @@
 <script>
 // @ is an alias to /src
-import Titlescreen from "@/components/Titlescreen";
+import About from "@/components/About";
 
 export default {
   name: 'Home',
   components: {
-    Titlescreen
+    About
   }
 }
 </script>
