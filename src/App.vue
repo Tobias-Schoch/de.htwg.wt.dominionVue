@@ -1,56 +1,37 @@
 <template>
-  <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
+  <v-app id="inspire">
+    <v-navigation-drawer
+        v-model="drawer"
+        app
+        class="pt-4"
+        color="grey lighten-3"
+        mini-variant
     >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-app-bar>
+      <v-avatar
+          v-for="n in 6"
+          :key="n"
+          :color="`grey ${n === 1 ? 'darken' : 'lighten'}-1`"
+          :size="n === 1 ? 36 : 20"
+          class="d-block text-center mx-auto mb-9"
+      ></v-avatar>
+    </v-navigation-drawer>
 
     <v-main>
-      <HelloWorld/>
+      <!--  -->
+      <Titlescreen>
+      </Titlescreen>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+import Titlescreen from "@/components/Titlescreen";
 
 export default {
   name: 'App',
 
   components: {
-    HelloWorld,
+    Titlescreen
   },
 
   data: () => ({
