@@ -53,6 +53,10 @@
 
 <style>
 
+    div.text {
+        text-align: left;
+    }
+
     .play .v-image, .rules .v-image {
         display: none;
     }
@@ -83,13 +87,5 @@
         -webkit-border-radius: 70px;
         border-radius: 70px;
         outline: none;
-    }
-
-    .btn, .btn:hover, .play, .play:hover {
-        -webkit-transition: all 250ms ease-in-out;
-        -moz-transition: all 250ms ease-in-out;
-        -ms-transition: all 250ms ease-in-out;
-        -o-transition: all 250ms ease-in-out;
-        transition: all 250ms ease-in-out;
     }
 </style>
