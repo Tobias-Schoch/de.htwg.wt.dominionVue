@@ -36,7 +36,7 @@
                            width="30px"
                            src="img/arrow.png">
                     </v-img>
-                    <div class="text">
+                    <div class="text" v-on:click="$router.push('about')">
                         Rules
                     </div>
                 </button>
