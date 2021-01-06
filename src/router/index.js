@@ -7,6 +7,10 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: "/",
+
+  },
+  {
+    path: "/titlescreen",
     name: "Titlescreen",
     component: TitlescreenView
   },

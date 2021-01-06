@@ -14,7 +14,6 @@
         <v-row>
             <v-col align="center"
                    justify="center">
-                <router-link to="/about">asdasdTasdest</router-link>
                 <button class="btn">
                     Play
                 </button>
