@@ -5,7 +5,7 @@
                    justify="center"
                    class="player_amount mt-9">
                 <div class="tui-instructions">
-                    How many players are you?
+                    {{htmlString}}
                 </div>
             </v-col>
         </v-row>
@@ -59,11 +59,18 @@
 </template>
 
 <script>
-export default {
-  methods: {
-    send(playerCount) {
-      this.$store.dispatch("request", playerCount);
+    import {mapGetters} from "vuex"
+
+    export default {
+        computed: {
+            ...mapGetters({
+                htmlString: 'getHtml'
+            })
+        },
+        methods: {
+            send(playerCount) {
+                this.$store.dispatch("request", playerCount);
+            }
+        }
     }
-  }
-}
 </script>
