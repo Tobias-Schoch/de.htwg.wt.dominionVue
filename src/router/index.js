@@ -6,8 +6,8 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',
-    name: 'Titlescreen',
+    path: "/",
+    name: "Titlescreen",
     component: TitlescreenView
   },
   {
