@@ -88,7 +88,7 @@
                  src="img/arrow.png">
           </v-img>
           <div class="text">
-            Play
+            Play<i data-feather="activity"></i>
           </div>
         </button>
       </v-col>

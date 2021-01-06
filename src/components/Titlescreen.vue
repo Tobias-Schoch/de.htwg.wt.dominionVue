@@ -30,13 +30,13 @@
         <v-row>
             <v-col align="center"
                    justify="center">
-                <button class="btn rules">
+                <button class="btn rules" v-on:click="$router.push('about')">
                     <v-img class="button-icon"
                            height="30px"
                            width="30px"
                            src="img/arrow.png">
                     </v-img>
-                    <div class="text" v-on:click="$router.push('about')">
+                    <div class="text">
                         Rules
                     </div>
                 </button>
