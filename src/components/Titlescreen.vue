@@ -85,7 +85,7 @@
         outline: none;
     }
 
-    .btn, .btn:hover {
+    .btn, .btn:hover, .play, .play:hover {
         -webkit-transition: all 250ms ease-in-out;
         -moz-transition: all 250ms ease-in-out;
         -ms-transition: all 250ms ease-in-out;
