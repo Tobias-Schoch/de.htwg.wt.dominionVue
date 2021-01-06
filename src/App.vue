@@ -39,3 +39,13 @@ export default {
   }),
 };
 </script>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=McLaren&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap');
+
+  .v-image {
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+</style>
