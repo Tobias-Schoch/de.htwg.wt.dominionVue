@@ -135,4 +135,17 @@
     .rule-button {
         margin-bottom: 30px;
     }
+    .card {
+        width: 150px;
+        display:block;
+        margin:auto;
+    }
+    .card-stack {
+        text-align: center;
+        border: 3px solid black;
+        margin-bottom: 10px;
+        padding: 0 0 10px 0;
+    }
+    .info {
+    }
 </style>
