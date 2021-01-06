@@ -25,7 +25,7 @@
                     <v-col align="center"
                            justify="center">
                         <v-btn>
-                            Rules
+                          About
                         </v-btn>
                     </v-col>
                 </v-row>

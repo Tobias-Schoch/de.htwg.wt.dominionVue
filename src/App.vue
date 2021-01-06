@@ -8,7 +8,7 @@
         mini-variant
     >
       <v-avatar
-          v-for="n in 6"
+          v-for="n in 2"
           :key="n"
           :color="`grey ${n === 1 ? 'darken' : 'lighten'}-1`"
           :size="n === 1 ? 36 : 20"

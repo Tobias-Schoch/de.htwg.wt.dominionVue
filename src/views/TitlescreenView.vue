@@ -3,7 +3,7 @@
 import Titlescreen from "@/components/Titlescreen";
 
 export default {
-  name: 'Home',
+  name: 'Titlescreen',
   components: {
     Titlescreen
   }
