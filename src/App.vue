@@ -15,23 +15,18 @@
           class="d-block text-center mx-auto mb-9"
       ></v-avatar>
     </v-navigation-drawer>
-
     <v-main>
-      <!--  -->
-      <Titlescreen>
-      </Titlescreen>
+      <router-view/>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import Titlescreen from "@/components/Titlescreen";
-
 export default {
   name: 'App',
 
   components: {
-    Titlescreen
+
   },
 
   data: () => ({

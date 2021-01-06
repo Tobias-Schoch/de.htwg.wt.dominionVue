@@ -1,26 +1,27 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import TitlescreenView from "@/views/TitlescreenView";
+import Titlescreen from "@/components/Titlescreen";
+import About from "@/components/About";
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: "/",
-
+    redirect: Titlescreen
   },
   {
     path: "/titlescreen",
-    name: "Titlescreen",
-    component: TitlescreenView
+    name: "titlescreen",
+    component: Titlescreen
   },
   {
     path: '/about',
-    name: 'About',
+    name: 'about',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    component: About
   }
 ]
 

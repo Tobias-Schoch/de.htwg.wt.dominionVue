@@ -1,11 +1,16 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <h1>hello</h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: "About"
+  name: "about",
+  data () {
+    return {
+      title: 'This is an about page'
+    }
+  }
 }
 </script>
