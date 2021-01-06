@@ -3,7 +3,7 @@
 import About from "@/components/About";
 
 export default {
-  name: 'Home',
+  name: 'About',
   components: {
     About
   }
