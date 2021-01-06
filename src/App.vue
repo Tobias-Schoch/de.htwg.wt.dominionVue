@@ -32,9 +32,9 @@
 
         components: {},
 
-        data: () => ({
-            //
-        }),
+        mounted() {
+          this.$store.dispatch("connectWebsocket");
+        }
     };
 </script>
 
