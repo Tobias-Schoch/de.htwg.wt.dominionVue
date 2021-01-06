@@ -23,11 +23,9 @@
         <v-row>
             <v-col align="center"
                    justify="center">
-                <v-text-field class="name-input">
-
+                <v-text-field class="name-input" id="name-input">
                 </v-text-field>
-                <button class="btn play" v-on:click="$router.push('game')">
-
+                <button class="btn play" v-on:click="$router.push('game'); send()">
                     <v-img class="button-icon"
                            height="30px"
                            width="30px"
@@ -52,7 +50,8 @@
         })
       },
       methods: {
-        send(playerName) {
+        send() {
+          var playerName = document.getElementById("name-input").value;
           this.$store.dispatch("request", playerName);
         }
       }

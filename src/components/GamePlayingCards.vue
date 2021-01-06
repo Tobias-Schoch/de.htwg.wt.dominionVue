@@ -4,7 +4,7 @@
     <v-row v-for="n in 2"
            :key="n">
       <v-col
-          v-for="n in 7"
+          v-for="n in playingCardDecks"
           :key="n">
         <img class="card gamecard" src="img/cards/Cellar.png">
       </v-col>
@@ -13,8 +13,19 @@
 </template>
 
 <script>
+import {mapGetters} from "vuex";
 export default {
-  name: "GamePlayingCards"
+  name: "GamePlayingCards",
+  computed: {
+    ...mapGetters({
+      playingCardDecks: 'getPlayingDecks'
+    }),
+    methods: {
+      send(cardId) {
+        this.$store.dispatch("request", cardId);
+      }
+    }
+  }
 }
 </script>
 

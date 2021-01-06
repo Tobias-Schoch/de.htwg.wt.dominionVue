@@ -3,8 +3,8 @@
     Handkarten
     <v-row>
       <v-col
-          v-for="n in 7"
-          :key="n">
+          v-for="i in handCards"
+          :key="i" id="i">
         <img class="card handcard" src="img/cards/Cellar.png">
       </v-col>
     </v-row>
@@ -12,8 +12,20 @@
 </template>
 
 <script>
+import {mapGetters} from "vuex";
+
 export default {
-  name: "GameHandCards"
+  name: "GameHandCards",
+  computed: {
+    ...mapGetters({
+      handCards: 'getPlayerHand'
+    }),
+    methods: {
+      send(cardId) {
+        this.$store.dispatch("request", cardId);
+      }
+    }
+  }
 }
 </script>
 
