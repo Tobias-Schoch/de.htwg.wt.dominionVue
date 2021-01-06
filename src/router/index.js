@@ -2,8 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Titlescreen from "@/components/Titlescreen";
 import About from "@/components/About";
-import Player from "@/components/Player";
-import PlayerName from "@/components/PlayerName";
+import GameView from "@/views/GameView";
 
 Vue.use(VueRouter)
 
@@ -24,13 +23,8 @@ const routes = [
   },
   {
     path: '/game',
-    name: 'player',
-    component: Player
-  },
-  {
-    path: '/playerName',
-    name: 'playerName',
-    component: PlayerName
+    name: 'game',
+    component: GameView
   }
 ]
 
