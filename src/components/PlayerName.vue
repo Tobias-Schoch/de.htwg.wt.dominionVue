@@ -1,5 +1,5 @@
 <template>
-    <v-container fill-width fluid>
+    <v-container fill-width fluid class="playername">
         <v-row>
             <v-col align="center"
                    justify="center">
@@ -15,13 +15,15 @@
             <v-col align="center"
                    justify="center"
                    class="player_amount mt-9">
-                Tell me your name
+                <div class="tui-instructions">
+                    Tell me your name
+                </div>
             </v-col>
         </v-row>
         <v-row>
             <v-col align="center"
                    justify="center">
-                <v-text-field>
+                <v-text-field class="name-input">
 
                 </v-text-field>
                 <button class="btn play" v-on:click="$router.push('game')">
@@ -31,7 +33,7 @@
                            width="30px"
                            src="img/arrow.png">
                     </v-img>
-                    <div class="text">
+                    <div class="text send-name">
                         Absenden
                     </div>
                 </button>

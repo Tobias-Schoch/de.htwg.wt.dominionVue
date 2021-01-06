@@ -1,16 +1,18 @@
 <template>
-    <v-container fill-width fluid>
+    <v-container fill-width fluid class="player">
         <v-row>
             <v-col align="center"
                    justify="center"
                    class="player_amount mt-9">
-                How many players are you?
+                <div class="tui-instructions">
+                    How many players are you?
+                </div>
             </v-col>
         </v-row>
         <v-row>
             <v-col align="center"
                    justify="center">
-                <button class="btn play player_amount" value="3">
+                <button class="btn play player_amount player-selection" value="3">
 
                     <v-img class="button-icon"
                            height="30px"
@@ -26,7 +28,7 @@
         <v-row>
             <v-col align="center"
                    justify="center">
-                <button class="btn play player_amount" value="4">
+                <button class="btn play player_amount player-selection" value="4">
 
                     <v-img class="button-icon"
                            height="30px"
@@ -42,7 +44,7 @@
         <v-row>
             <v-col align="center"
                    justify="center">
-                <button class="btn play player_amount" value="5" v-on:click="send()">
+                <button class="btn play player_amount player-selection" value="5">
 
                     <v-img class="button-icon"
                            height="30px"

@@ -1,5 +1,5 @@
 <template>
-    <v-container fill-width fluid>
+    <v-container fill-width fluid class="gameboard">
         <div class="card-stack">
             Gamekarten
             <v-row>
@@ -30,7 +30,7 @@
                 <v-col
                         v-for="n in 7"
                         :key="n">
-                    <img class="card gamecard" src="img/cards/Cellar.png">
+                    <img class="card handcard" src="img/cards/Cellar.png">
                 </v-col>
             </v-row>
         </div>
@@ -38,6 +38,25 @@
 </template>
 
 <script>
+    import jQuery from 'jquery';
+    jQuery(document).ready(function ($) {
+
+        $(".player").show();
+        $(".playername").hide();
+        $(".gameboard").hide();
+
+        $(document).on('click', '.player-selection', function () {
+            $(".player").hide();
+            $(".playername").show();
+        });
+
+        $(document).on('click', '.send-name', function () {
+            $(".playername").hide();
+            $(".gameboard").show();
+        });
+
+    });
+
     export default {
         //
     }
