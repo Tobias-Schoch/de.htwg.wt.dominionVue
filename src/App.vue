@@ -45,15 +45,15 @@
     @import url('https://fonts.googleapis.com/css2?family=McLaren&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap');
 
-    p, h4, .btn, .v-input, .player_amount, li, .game-info, .card-stack, .game-information-container {
+    p, h4, .btn, .v-input, .player_amount, li, .game-info, .card-stack, .game-information-container, .text {
         font-family: 'McLaren', cursive;
     }
 
-    h4, .btn, .player_amount, .card-stack {
+    h4, .btn, .player_amount, .card-stack, .text {
         font-weight: bold;
     }
 
-    .btn, .player_amount, .game-info, .card-stack, .game-information-container {
+    .btn, .player_amount, .game-info, .card-stack, .game-information-container, .text {
         text-transform: uppercase;
     }
 

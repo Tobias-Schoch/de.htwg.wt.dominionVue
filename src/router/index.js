@@ -2,7 +2,9 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Titlescreen from "@/components/Titlescreen";
 import About from "@/components/About";
+import Webcomponent from "@/components/Webcomponent";
 import GameView from "@/views/GameView";
+
 
 Vue.use(VueRouter)
 
@@ -25,6 +27,11 @@ const routes = [
     path: '/game',
     name: 'game',
     component: GameView
+  },
+  {
+    path: '/webcomponent',
+    name: 'webcomponent',
+    component: Webcomponent
   }
 ]
 
