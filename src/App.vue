@@ -10,15 +10,17 @@
             <v-avatar class="d-block text-center mx-auto mb-5 mt-5" v-on:click="$router.push('titlescreen')">
                 <img src="img/home.png">
             </v-avatar>
-            <v-avatar class="d-block text-center mx-auto mb-5" v-on:click="$router.push('game')">
+            <v-avatar class="d-block text-center mx-auto mb-5" style="" v-on:click="$router.push('game')">
                 <img src="img/play-button.png">
             </v-avatar>
             <v-avatar class="d-block text-center mx-auto mb-5" v-on:click="$router.push('about')">
                 <img src="img/info.png">
             </v-avatar>
-            <a href="https://github.com/Involute1/de.htwg.wt.dominionVue" target="_blank"><v-avatar class="d-block text-center mx-auto mb-5">
-                <img src="img/github.png">
-            </v-avatar></a>
+            <a href="https://github.com/Involute1/de.htwg.wt.dominionVue" target="_blank">
+                <v-avatar class="d-block text-center mx-auto mb-5">
+                    <img src="img/github.png">
+                </v-avatar>
+            </a>
         </v-navigation-drawer>
         <v-main>
             <router-view/>
@@ -27,13 +29,14 @@
 </template>
 
 <script>
+
     export default {
         name: 'App',
 
-        components: {},
+        computed: {},
 
         mounted() {
-          this.$store.dispatch("connectWebsocket");
+            this.$store.dispatch("connectWebsocket");
         }
     };
 </script>
@@ -42,9 +45,75 @@
     @import url('https://fonts.googleapis.com/css2?family=McLaren&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap');
 
+    p, h4, .btn, .v-input, .player_amount, li, .game-info, .card-stack, .game-information-container {
+        font-family: 'McLaren', cursive;
+    }
+
+    h4, .btn, .player_amount, .card-stack {
+        font-weight: bold;
+    }
+
+    .btn, .player_amount, .game-info, .card-stack, .game-information-container {
+        text-transform: uppercase;
+    }
+
+    .btn {
+        text-align: center;
+        font-size: 25px;
+        width: 140px;
+        height: 70px;
+        -webkit-border-radius: 70px;
+        border-radius: 70px;
+        outline: none;
+    }
+
+    .hand-decks {
+        margin: auto;
+    }
+
+    .card-stack, .game-information-container {
+        font-size: 25px;
+    }
+
+    .player-selection.btn, .player-names.btn {
+        font-weight: normal;
+    }
+
+    .player-selection.btn {
+        width: 170px;
+    }
+
+    .player-names.btn {
+        width: 200px;
+    }
+
+    .game-info {
+        float: left;
+        margin: 10px 0 0 70px;
+        font-size: 20px;
+    }
+
+    div.text, .rules {
+        text-align: left;
+    }
+
+    .hidden-win-hand, .hidden-win-playing {
+        display: none;
+    }
+
+    .card_image {
+        width: 150px;
+        display: block;
+        margin: 10px;
+        cursor: pointer;
+    }
+
     .v-avatar img {
         width: 25px !important;
         height: 25px !important;
+    }
+
+    .v-avatar {
         border-radius: 0 !important;
     }
 
@@ -55,10 +124,6 @@
 
     .v-avatar, object, svg {
         cursor: pointer;
-    }
-
-    div.text {
-        text-align: left;
     }
 
     .play .v-image, .rules .v-image {
@@ -80,28 +145,17 @@
         margin-left: 15px;
     }
 
-    .btn {
-        text-align: center;
-        text-transform: uppercase;
-        font-size: 25px;
-        font-family: 'McLaren', cursive;
-        font-weight: bold;
-        width: 140px;
-        height: 70px;
-        -webkit-border-radius: 70px;
-        border-radius: 70px;
-        outline: none;
-    }
 
     .player_amount {
         margin-bottom: 35px;
     }
+
     .v-input {
         width: 800px;
         font-size: 22px;
-        font-family: 'McLaren', cursive;
         font-weight: bold;
     }
+
     .v-image.button-icon {
         float: left;
         margin-right: 15px;
@@ -116,36 +170,26 @@
 
     .player_amount {
         text-align: center;
-        text-transform: uppercase;
         font-size: 35px;
-        font-family: 'McLaren', cursive;
-        font-weight: bold;
     }
 
     button.player_amount {
         font-weight: normal;
     }
+
     h4 {
         font-size: 25px;
         margin-top: 35px;
     }
-    .rules {
-        text-align: left;
-    }
+
     .rule-button {
         margin-bottom: 30px;
     }
-    .card {
-        width: 150px;
-        display:block;
-        margin:auto;
-    }
-    .card-stack {
+
+    .card-stack, .game-information-container {
         text-align: center;
         border: 3px solid black;
         margin-bottom: 10px;
-        padding: 0 0 10px 0;
-    }
-    .info {
+        padding: 0 0 10px 20px;
     }
 </style>

@@ -1,32 +1,48 @@
 <template>
-  <div class="card-stack">
-    Handkarten
-    <v-row>
-      <v-col
-          v-for="i in handCards"
-          :key="i" id="i">
-        <img class="card handcard" src="img/cards/Cellar.png">
-      </v-col>
-    </v-row>
-  </div>
+    <div class="card-stack">
+        Handkarten
+        <div class="hidden-win-hand">{{ handCards }}</div>
+        <v-row class="playing-decks-hand"
+               align="center"
+               justify="center">
+        </v-row>
+    </div>
 </template>
 
 <script>
-import {mapGetters} from "vuex";
+    import {mapGetters} from "vuex";
+    import jQuery from "jquery";
 
-export default {
-  name: "GameHandCards",
-  computed: {
-    ...mapGetters({
-      handCards: 'getPlayerHand'
-    }),
-    methods: {
-      send(cardId) {
-        this.$store.dispatch("request", cardId);
-      }
+    jQuery(document).ready(function ($) {
+        var cards = "";
+        var timerID = setInterval(function () {
+            cards = $(".hidden-win-hand").html();
+            if (cards.indexOf("cardName") >= 0) {
+                cards = JSON.parse(cards);
+                for (var i = 0; i < cards[0].length; i++) {
+                    $('.playing-decks-hand').append('<v-col id="card_' + i + '" class="card" @click="push_hand(' + i + ')"><img class="card_image" src="img/cards/' + cards[0][i].cardName + '.png"></v-col>');
+                }
+                clearInterval(timerID)
+            }
+        }, 50);
+    });
+
+    export default {
+        name: "GameHandCards",
+        computed: {
+            ...mapGetters({
+                handCards: 'getPlayerHand'
+            })
+        },
+        methods: {
+            send(cardId) {
+                this.$store.dispatch("request", cardId);
+            },
+            push_hand(i) {
+                this.$store.dispatch("request", i);
+            }
+        }
     }
-  }
-}
 </script>
 
 <style scoped>

@@ -21,6 +21,7 @@
 </template>
 
 <script>
+
 import Player from "@/components/Player";
 import PlayerName from "@/components/PlayerName";
 import GameInfo from "@/components/GameInfo";

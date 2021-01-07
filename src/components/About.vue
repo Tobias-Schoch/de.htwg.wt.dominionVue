@@ -80,7 +80,7 @@
     <v-row>
       <v-col align="center"
              justify="center">
-        <button class="btn rule-button play">
+        <button class="btn rule-button play" v-on:click="$router.push('game')">
 
           <v-img class="button-icon"
                  height="30px"
@@ -88,7 +88,7 @@
                  src="img/arrow.png">
           </v-img>
           <div class="text">
-            Play<i data-feather="activity"></i>
+            Play
           </div>
         </button>
       </v-col>

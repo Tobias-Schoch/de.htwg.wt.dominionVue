@@ -1,13 +1,13 @@
 <template>
-  <div class="card-stack">
+  <div class="game-information-container">
     <v-row>
       <v-col>
-        <div class="info" id="playerName">Name: {{ pName }}</div>
-        <div class="info" id="playerMoney">Money: {{ money }}</div>
-        <div class="info" id="turn">Turn: {{ gameTurn }}</div>
-        <div class="info" id="phase">Phase: {{ phase }}</div>
-        <div class="info" id="playerActions">Actions: {{ actions }}</div>
-        <div class="info" id="playerBuys">Buys: {{ buys }}</div>
+        <div class="game-info" id="playerName">Name: {{ pName }}</div>
+        <div class="game-info" id="playerMoney">Money: {{ money }}</div>
+        <div class="game-info" id="turn">Turn: {{ gameTurn }}</div>
+        <div class="game-info" id="phase">Phase: {{ phase }}</div>
+        <div class="game-info" id="playerActions">Actions: {{ actions }}</div>
+        <div class="game-info" id="playerBuys">Buys: {{ buys }}</div>
       </v-col>
     </v-row>
   </div>

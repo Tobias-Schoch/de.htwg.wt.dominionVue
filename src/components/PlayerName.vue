@@ -25,7 +25,7 @@
                    justify="center">
                 <v-text-field class="name-input" id="name-input">
                 </v-text-field>
-                <button class="btn play" v-on:click="$router.push('game'); send()">
+                <button class="btn play player-names" v-on:click="$router.push('game'); send()">
                     <v-img class="button-icon"
                            height="30px"
                            width="30px"
