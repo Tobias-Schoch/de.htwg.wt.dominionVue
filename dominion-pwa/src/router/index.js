@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 import Titlescreen from "@/components/Titlescreen";
 import About from "@/components/About";
 import GameView from "@/views/GameView";
-
+import Authentication from "@/components/Authentication";
 
 Vue.use(VueRouter)
 
@@ -26,6 +26,11 @@ const routes = [
     path: '/game',
     name: 'game',
     component: GameView
+  },
+  {
+    path: '/auth',
+    name: 'auth',
+    component: Authentication
   }
 ]
 
