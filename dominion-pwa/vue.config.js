@@ -7,6 +7,8 @@ module.exports = {
     appleMobileWebAppStatusBarStyle: 'black',
     workboxPluginMode: 'GenerateSW',
     workboxOptions: {
+      skipWaiting: true,
+      clientsClaim: true,
       navigateFallback: 'index.html',
     },
     manifestOptions: {
