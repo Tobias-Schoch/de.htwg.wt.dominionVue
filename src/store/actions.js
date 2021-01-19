@@ -44,6 +44,7 @@ export default {
             commit('setPlayingDecks', controller.playingDecks);
             commit('setPlayerTurn', controller.playerTurn);
         }
+        console.log(controller);
     },
 
     request({commit}, command) {
