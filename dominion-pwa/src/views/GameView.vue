@@ -25,13 +25,12 @@
 import Player from "@/components/Player";
 import PlayerName from "@/components/PlayerName";
 import GameInfo from "@/components/GameInfo";
-import GamePlayingCards from "@/components/GamePlayingCards";
 import GameHandCards from "@/components/GameHandCards";
 import {mapGetters} from "vuex";
 
 export default {
   name: "GameView",
-  components: {GameHandCards, GamePlayingCards, GameInfo, PlayerName, Player},
+  components: {GameHandCards, GameInfo, PlayerName, Player},
   computed: {
     ...mapGetters({
       htmlString: 'getHtml'
