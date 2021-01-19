@@ -1,6 +1,6 @@
 <template>
   <div class="game">
-    <div class="card-stack">
+    <div class="card-stack gameboard-cards">
       Gamekarten
       <div class="hidden-win-playing">{{ playingCardDecks }}</div>
       <v-row class="playing-decks"
@@ -56,7 +56,7 @@
         </div>
       </v-row>
     </div>
-    <div class="card-stack">
+    <div class="card-stack handcards">
       Handkarten
       <div class="hidden-win-hand">{{ handCards }}</div>
       <v-row class="playing-decks-hand"
@@ -95,6 +95,7 @@ function getImages() {
   var cardsJSON = "";
   cards = jQuery(".hidden-win-hand").html();
   console.log(cards);
+  console.log(jQuery(".hidden-win-playing").html());
   cardsJSON = JSON.parse(cards);
   console.log(cardsJSON);
   if (cardsJSON !== "" && cardsJSON !== null) {
@@ -113,10 +114,13 @@ function checkState() {
   if (phase.includes("Actionphase")) {
     $(".game_card img").css("cursor", "not-allowed");
     $(".hand_card img").css("cursor", "pointer");
+    $(".handcards").css("background-image", "none");
+    $(".gameboard-cards").css("background-image", "url(img/bg.png)");
   } else if (phase.includes("Buyphase")) {
     $(".game_card img").css("cursor", "pointer");
     $(".hand_card img").css("cursor", "not-allowed");
-
+    $(".handcards").css("background-image", "url(img/bg.png)");
+    $(".gameboard-cards").css("background-image", "none");
   }
 }
 
