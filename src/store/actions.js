@@ -4,6 +4,7 @@ let controller = {};
 export default {
     connectWebsocket({dispatch, commit}) {
         websocket = new WebSocket("ws://localhost:9000/websocket");
+        //websocket = new WebSocket("ws://wtbackend.herokuapp.com/websocket");
         console.info('websocket connecting...');
 
         websocket.onopen = () => {
