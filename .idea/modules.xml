@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/dominion-pwa.iml" filepath="$PROJECT_DIR$/.idea/dominion-pwa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/de.htwg.wt.dominionVue2.iml" filepath="$PROJECT_DIR$/.idea/de.htwg.wt.dominionVue2.iml" />
     </modules>
   </component>
 </project>
